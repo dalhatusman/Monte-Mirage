@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #01140d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* the container/contact section */
+.container {
+  background-image: url("img/exterior.jpg");
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  color:white;
+  float:right;
+  position:right;
+  margin: right 10px;
+}
+
+/* two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.box{
+    background-color: rgba(0,0,0,0.726);
+    height:80px;
+}
+menu{
+    width:80%;
+    position:fixed;
+    top:0;
+}
+img{
+    float:left;
+}
+menu ul li{
+    display: inline-block;
+    padding-top: 30px;
+}
+menu ul li a{
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:white;
+}
+ul{
+    float: right;
+}
+menu ul li a:hover{
+    color:orange;
+    border-bottom: solid 1px orange;
+    padding-bottom: 15px;
+    transition: 0.5s;
+}
+menu ul li a:nth-child(7){
+    border-left: solid 1.5px dodgerblue;
+}
+</style>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="box">
+    <menu>
+        <img src="img/logo.png" width:"80px" style="position: relative; margin-top: 10px; bottom:0px">
+        <ul>
+            <li><a href="index.html" target="_top">HOME</a></li>
+            <li><a href="gallery.html" target="_bottom">GALLERY</a></li>
+            <li><a href="reservation.html" target="_bottom">BOOKING</a></li>
+            <li><a href="aboutus.html"  target="_bottom">ABOUT US</a></li>
+            <li><a href="Contact.html"  target="_bottom">CONTACT US</a></li>
+            <li><a href="CV ASSIGNMNET.html"  target="_bottom">CV</a></li>
+        </ul>
+    </menu>
+    </div>
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Swing by for some nights, or leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="img/exterior.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="submit.php" enctype="multipart/form-data" method="post" accept-charset="UTF-8" class="contact">
+        <label for="fname">Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">subject</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="email">email</label><br>
+        <input type="email" id="email"><br>
+        <label for="subject">Message</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="SUBMIT">
+      </form>
+      
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
